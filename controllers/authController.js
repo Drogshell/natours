@@ -12,6 +12,29 @@ const signToken = (id) =>
         expiresIn: process.env.JWT_EXPIRES_IN,
     });
 
+const createSendToken = (user, statusCode, res) => {
+    const token = signToken(user._id);
+
+    const cookieOptions = {
+        expires: new Date(
+            Date.now() + process.env.JWT_EXPIRES_IN * 24 * 60 * 60 * 1000
+        ),
+        httpOnly: true,
+    };
+    if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
+    res.cookie('jwt', token, cookieOptions);
+
+    user.userPassword = undefined;
+
+    res.status(statusCode).json({
+        status: 'success',
+        token,
+        data: {
+            user,
+        },
+    });
+};
+
 exports.signUp = catchAsync(async (req, res, next) => {
     // We only get the information required and prevent users from creating admin profiles.
     // Admins can only be created via MongoDB using the compass app
@@ -21,16 +44,7 @@ exports.signUp = catchAsync(async (req, res, next) => {
         userPassword: req.body.userPassword,
         userConfirmPassword: req.body.userConfirmPassword,
     });
-
-    const token = signToken(newUser);
-
-    res.status(201).json({
-        status: 'success',
-        token,
-        data: {
-            user: newUser,
-        },
-    });
+    createSendToken(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -48,12 +62,7 @@ exports.login = catchAsync(async (req, res, next) => {
     ) {
         return next(new AppError('Wrong username or password', 401));
     }
-
-    const token = signToken(user._id);
-    res.status(200).json({
-        status: 'success',
-        token,
-    });
+    createSendToken(user, 200, res);
 });
 
 exports.protect = catchAsync(async (req, res, next) => {
@@ -111,6 +120,26 @@ exports.restrictTo =
             );
         }
     };
+
+exports.updatePassword = catchAsync(async (req, res, next) => {
+    // user.findByIdAndUpdate will NOT work here because mongoose doesn't keep track of the current object in memory
+    const user = await User.findById(req.user.id).select('+userPassword');
+
+    if (
+        !(await user.comparePassword(
+            req.body.passwordCurrent,
+            user.userPassword
+        ))
+    ) {
+        return next(new AppError('Incorrect password', 401));
+    }
+
+    user.userPassword = req.body.userPassword;
+    user.userConfirmPassword = req.body.userConfirmPassword;
+    await user.save();
+
+    createSendToken(user, 200, res);
+});
 
 exports.forgotPassword = catchAsync(async (req, res, next) => {
     const user = await User.findOne({ userEmail: req.body.userEmail });
@@ -170,10 +199,5 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     user.passwordResetToken = undefined;
     user.passwordResetExpires = undefined;
     await user.save();
-
-    const token = signToken(user._id);
-    res.status(200).json({
-        status: 'success',
-        token,
-    });
+    createSendToken(user, 200, res);
 });
