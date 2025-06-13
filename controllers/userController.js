@@ -1,6 +1,7 @@
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
+const factory = require('./handlerFactory');
 
 const filterObject = (obj, ...allowedFields) => {
     const filteredObject = {};
@@ -11,18 +12,12 @@ const filterObject = (obj, ...allowedFields) => {
     return filteredObject;
 };
 
-exports.getAllUsers = catchAsync(async (req, res, next) => {
-    const users = await User.find();
+exports.getMe = (req, res, next) => {
+    req.params.id = req.user.id;
+    next();
+};
 
-    res.status(200).json({
-        status: 'success',
-        data: {
-            users,
-        },
-    });
-});
-
-exports.updateMyProfile = catchAsync(async (req, res, next) => {
+exports.updateMe = catchAsync(async (req, res, next) => {
     if (req.body.userPassword || req.body.userConfirmPassword) {
         return next(
             new AppError('This is not the route to change passwords'),
@@ -30,7 +25,7 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
         );
     }
 
-    const filteredBody = filterObject(req.body, 'name', 'email');
+    const filteredBody = filterObject(req.body, 'userName', 'userEmail');
 
     const updateUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
         new: true,
@@ -45,11 +40,11 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
     });
 });
 
-exports.deleteMyProfile = catchAsync(async (req, res, next) => {
+exports.deleteMe = catchAsync(async (req, res, next) => {
     // This doesn't actually delete the user from the database, but from the users perspective it does.
     // Could potentially add some code that deletes them properly after some time has passed
     await User.findByIdAndUpdate(req.user.id, { active: false });
-    res.status(203).json({
+    res.status(204).json({
         status: 'success',
         data: null,
     });
@@ -58,24 +53,10 @@ exports.deleteMyProfile = catchAsync(async (req, res, next) => {
 exports.createUser = (req, res) => {
     res.status(500).json({
         status: 'error',
-        message: "This route hasn't been defined",
+        message: 'This route is not defined, please use /signup instead',
     });
 };
-exports.getUser = (req, res) => {
-    res.status(500).json({
-        status: 'error',
-        message: "This route hasn't been defined",
-    });
-};
-exports.updateUser = (req, res) => {
-    res.status(500).json({
-        status: 'error',
-        message: "This route hasn't been defined",
-    });
-};
-exports.deleteUser = (req, res) => {
-    res.status(500).json({
-        status: 'error',
-        message: "This route hasn't been defined",
-    });
-};
+exports.getAllUsers = factory.getAll(User);
+exports.getUser = factory.getOne(User);
+exports.updateUser = factory.updateOne(User);
+exports.deleteUser = factory.deleteOne(User);

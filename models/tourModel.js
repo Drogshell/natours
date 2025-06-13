@@ -74,8 +74,34 @@ const tourSchema = new mongoose.Schema(
             type: Boolean,
             default: false,
         },
+        startLocation: {
+            type: {
+                type: String,
+                default: 'Point',
+                enum: ['Point'],
+            },
+            coordinates: [Number],
+            address: String,
+            description: String,
+        },
+        locations: [
+            {
+                type: {
+                    type: String,
+                    default: 'Point',
+                    enum: ['Point'],
+                },
+                coordinates: [Number],
+                address: String,
+                description: String,
+                day: Number,
+            },
+        ],
+        guides: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
     },
     {
+        // When a field is not stored in a database but calculated for
+        // some other value then we need that to show up using the following code
         toJSON: { virtuals: true },
         toObject: { virtuals: true },
     }
@@ -84,6 +110,12 @@ const tourSchema = new mongoose.Schema(
 // This property is not actually part of the database
 tourSchema.virtual('durationWeeks').get(function () {
     return this.duration / 7;
+});
+
+tourSchema.virtual('reviews', {
+    ref: 'Review',
+    foreignField: 'tour',
+    localField: '_id',
 });
 
 // Document middleware: runs before .save() and .create() but not for .update()
@@ -95,6 +127,14 @@ tourSchema.pre('save', function (next) {
 // This allows you to create a secret that won't be shown
 tourSchema.pre(/^find/, function (next) {
     this.find({ secretTour: { $ne: true } });
+    next();
+});
+
+tourSchema.pre(/^find/, function (next) {
+    this.populate({
+        path: 'guides',
+        select: '-__v -passwordChangedAt',
+    });
     next();
 });
 
