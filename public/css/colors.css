@@ -1,15 +1,16 @@
 :root {
     /*Main Colors */
-    --text: #e8fdef;
     --background: #000502;
     --primary: #54c47a;
     --secondary: #0b8e81;
     --accent: #0fb1b3;
 
-    --card: #0C120E; /*Not sure if I like this color*/
+    --grey-1: #3b4a3f;
+    --grey-2: #9eb0a2;
+    --grey-3: #99aeba;
 
-    --grey-1: #777;
-    --grey-2: #999;
+    --error-red: #f95050;
+    --error-variant: #F55900;
 
     /*Shades */
     --text-50: #021709;
@@ -24,6 +25,7 @@
     --text-900: #d0fbde;
     --text-950: #e8fdef;
 
+    --background-5: #0C120E;
     --background-50: #001a0a;
     --background-100: #003314;
     --background-200: #006629;

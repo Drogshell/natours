@@ -23,9 +23,16 @@ body {
     line-height: 1.6;
     font-weight: 300;
     font-family: 'Inter', 'Poppins', sans-serif;
-    color: var(--grey-2);
+    color: var(--text-950);
     padding: 2rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.main {
+    /*background-color: red;*/
+    padding: 8rem 6rem;
+    flex: 1;
+    position: relative;
 }
