@@ -1,0 +1,422 @@
+[
+  {
+    "_id": "5c8a34ed14eb5c17645c9108",
+    "review": "🥰 I really enjoyed the forest canopy, and the team's information was spot on.",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a355b14eb5c17645c9109",
+    "review": "😍 I really enjoyed the lakeshore, and the team's route selection was spot on.",
+    "rating": 4,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a359914eb5c17645c910a",
+    "review": "I wasn't happy with the safety measures, and the staff appeared unprepared.",
+    "rating": 2,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "tour": "5c88fa8cf4afda39709c295d"
+  },
+  {
+    "_id": "5c8a35b614eb5c17645c910b",
+    "review": "Average outing. The pace varied throughout the tour.",
+    "rating": 3,
+    "user": "5c8a1dfa2f8fb814b56fa181",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a364c14eb5c17645c910c",
+    "review": "The trail felt navigation, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a368c14eb5c17645c910d",
+    "review": "Not worth the price, especially since the river crossing didn't meet expectations.",
+    "rating": 2,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a36a014eb5c17645c910e",
+    "review": "Poorly organized, and the mountain ridge was quite disappointing.",
+    "rating": 2,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a36b714eb5c17645c910f",
+    "review": "The route felt unsafe at the waterfall viewpoint, which was frustrating.",
+    "rating": 2,
+    "user": "5c8a1e1a2f8fb814b56fa182",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a379a14eb5c17645c9110",
+    "review": "I really enjoyed the sunrise vista, and the team's route selection was spot on.",
+    "rating": 4,
+    "user": "5c8a24402f8fb814b56fa190",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a37b114eb5c17645c9111",
+    "review": "The trail felt equipment, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a24402f8fb814b56fa190",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a37cb14eb5c17645c9112",
+    "review": "The hike was okay; managing the information could be improved.",
+    "rating": 3,
+    "user": "5c8a24402f8fb814b56fa190",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a37dd14eb5c17645c9113",
+    "review": "A wonderfully curated tour with experienced staff and stunning scenery. 😍",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a37f114eb5c17645c9114",
+    "review": "Fantastic blend of adventure and care, especially during the canyon overlook.",
+    "rating": 5,
+    "user": "5c8a24402f8fb814b56fa190",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a381714eb5c17645c9115",
+    "review": "Our guide was supportive and provided clear explanations at the sunset point.",
+    "rating": 4,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a382d14eb5c17645c9116",
+    "review": "Good staff effort, though the sunrise vista was underwhelming.",
+    "rating": 3,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a384114eb5c17645c9117",
+    "review": "Seamless experience from start to finish, thanks to the professional team.",
+    "rating": 5,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a385614eb5c17645c9118",
+    "review": "I really enjoyed the mountain ridge, and the team's equipment was spot on.",
+    "rating": 4,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "tour": "5c88fa8cf4afda39709c295d"
+  },
+  {
+    "_id": "5c8a387214eb5c17645c9119",
+    "review": "Our guide seemed professional, and the overall information suffered.",
+    "rating": 2,
+    "user": "5c8a1ec62f8fb814b56fa183",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a38ac14eb5c17645c911a",
+    "review": "Fantastic blend of adventure and care - especially during the sunset point.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a38c714eb5c17645c911b",
+    "review": "Fantastic blend of adventure and care - especially during the mountain ridge.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a38da14eb5c17645c911c",
+    "review": "Fantastic blend of adventure and care - especially during the waterfall viewpoint.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a38ed14eb5c17645c911d",
+    "review": "Our guide was organized and provided clear explanations at the lakeshore.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c295d"
+  },
+  {
+    "_id": "5c8a390d14eb5c17645c911e",
+    "review": "Good staff effort, though the mountain ridge was underwhelming.",
+    "rating": 3,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a391f14eb5c17645c911f",
+    "review": "Our guide was patient and provided clear explanations at the wildlife spot.",
+    "rating": 4,
+    "user": "5c8a211f2f8fb814b56fa188",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a395b14eb5c17645c9120",
+    "review": "The trail felt difficulty, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a399014eb5c17645c9121",
+    "review": "Not worth the price especially since the forest canopy didn't meet expectations. 🤮",
+    "rating": 1,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "tour": "5c88fa8cf4afda39709c295d"
+  },
+  {
+    "_id": "5c8a39a214eb5c17645c9122",
+    "review": "A wonderfully curated tour with supportive staff and stunning scenery.",
+    "rating": 5,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a39b614eb5c17645c9123",
+    "review": "Not worth the price - especially since the canyon overlook didn't meet expectations.",
+    "rating": 2,
+    "user": "5c8a20d32f8fb814b56fa187",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a3a7014eb5c17645c9124",
+    "review": "I really enjoyed the rock formation, and the team's pace was spot on.",
+    "rating": 4,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a3a8d14eb5c17645c9125",
+    "review": "The trail felt information, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a3a9914eb5c17645c9126",
+    "review": "Our guide was experienced and provided clear explanations at the forest canopy.",
+    "rating": 4,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a3aaa14eb5c17645c9127",
+    "review": "The hike was okay; managing the logistics could be improved.",
+    "rating": 3,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a3abc14eb5c17645c9128",
+    "review": "I really enjoyed the mountain ridge, and the team's logistics was spot on.",
+    "rating": 5,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a3acf14eb5c17645c9129",
+    "review": "It was a decent hike; the lakeshore didn't stand out much.",
+    "rating": 3,
+    "user": "5c8a23c82f8fb814b56fa18d",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a3b1e14eb5c17645c912a",
+    "review": "Our guide was knowledgeable and provided clear explanations at the lakeshore.",
+    "rating": 4,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a3b3214eb5c17645c912b",
+    "review": "A wonderfully curated tour with knowledgeable staff and stunning scenery.",
+    "rating": 4,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a3b4714eb5c17645c912c",
+    "review": "The hike was okay; managing the navigation could be improved.",
+    "rating": 3,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a3b6714eb5c17645c912e",
+    "review": "Not worth the price especially since the mountain ridge didn't meet expectations.",
+    "rating": 1,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a3b7c14eb5c17645c912f",
+    "review": "Our guide seemed knowledgeable, and the overall information suffered.",
+    "rating": 2,
+    "user": "5c8a23de2f8fb814b56fa18e",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a3b9f14eb5c17645c9130",
+    "review": "☠️ The route felt unsafe at the mountain ridge, which was frustrating.",
+    "rating": 1,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a3bc414eb5c17645c9131",
+    "review": "Fantastic blend of adventure and care: especially during the sunrise vista.",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a3bdc14eb5c17645c9132",
+    "review": "Seamless experience from start to finish, thanks to the patient team.",
+    "rating": 5,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a3bf514eb5c17645c9133",
+    "review": "The trail felt pace, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a24282f8fb814b56fa18f",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a3c2514eb5c17645c9134",
+    "review": "Our guide was supportive and provided clear explanations at the rock formation.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a3c3b14eb5c17645c9135",
+    "review": "I really enjoyed the river crossing, and the team's difficulty was spot on.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c295a"
+  },
+  {
+    "_id": "5c8a3c5314eb5c17645c9136",
+    "review": "Seamless experience from start to finish, thanks to the supportive team.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a3c6814eb5c17645c9137",
+    "review": "Seamless experience from start to finish, thanks to the enthusiastic team.",
+    "rating": 4,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c295d"
+  },
+  {
+    "_id": "5c8a3c7814eb5c17645c9138",
+    "review": "A wonderfully curated tour with friendly staff and stunning scenery.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c2966"
+  },
+  {
+    "_id": "5c8a3c9014eb5c17645c9139",
+    "review": "The route felt unsafe at the river crossing, which was frustrating. 🤬",
+    "rating": 1,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a3ca314eb5c17645c913a",
+    "review": "Seamless experience from start to finish, thanks to the knowledgeable team.",
+    "rating": 5,
+    "user": "5c8a245f2f8fb814b56fa191",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a3cdc14eb5c17645c913b",
+    "review": "Fantastic blend of adventure and care - especially during the lakeshore.",
+    "rating": 4,
+    "user": "5c8a24822f8fb814b56fa192",
+    "tour": "5c88fa8cf4afda39709c2955"
+  },
+  {
+    "_id": "5c8a3cf414eb5c17645c913c",
+    "review": "Seamless experience from start to finish, thanks to the caring team.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a3d1e14eb5c17645c913d",
+    "review": "Our guide was experienced and provided clear explanations at the river crossing.",
+    "rating": 5,
+    "user": "5c8a24822f8fb814b56fa192",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a3d3a14eb5c17645c913e",
+    "review": "I really enjoyed the canyon overlook, and the team's difficulty was spot on.",
+    "rating": 4,
+    "user": "5c8a24822f8fb814b56fa192",
+    "tour": "5c88fa8cf4afda39709c2970"
+  },
+  {
+    "_id": "5c8a3d5314eb5c17645c913f",
+    "review": "It was a decent hike 😞; the sunset point didn't stand out much.",
+    "rating": 3,
+    "user": "5c8a24822f8fb814b56fa192",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a3d8614eb5c17645c9140",
+    "review": "The hike was okay; managing the route selection could be improved.",
+    "rating": 3,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "tour": "5c88fa8cf4afda39709c2974"
+  },
+  {
+    "_id": "5c8a3d9b14eb5c17645c9141",
+    "review": "I really enjoyed the rock formation, and the team's equipment was spot on.",
+    "rating": 5,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "tour": "5c88fa8cf4afda39709c296c"
+  },
+  {
+    "_id": "5c8a3de514eb5c17645c9143",
+    "review": "I really enjoyed the canyon overlook 😁, and the team's information was spot on.",
+    "rating": 4,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "tour": "5c88fa8cf4afda39709c2961"
+  },
+  {
+    "_id": "5c8a3e0714eb5c17645c9144",
+    "review": "The trail felt breaks, but the guide tried to keep things engaging.",
+    "rating": 3,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "tour": "5c88fa8cf4afda39709c2951"
+  },
+  {
+    "_id": "5c8a3e63e12c44188b4dbc5b",
+    "review": "I really enjoyed the lakeshore, and the team's logistics was spot on. 😁",
+    "rating": 5,
+    "user": "5c8a24a02f8fb814b56fa193",
+    "tour": "5c88fa8cf4afda39709c2966"
+  }
+]
