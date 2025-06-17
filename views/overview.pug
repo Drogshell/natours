@@ -8,7 +8,7 @@ block content
                     div.card_header
                         div.card_picture
                             div.card_picture-overlay &nbsp;
-                            img.card_picture-img(src=`img/tours/${tour.imageCover}` alt=`Picture of ${tour.name}`)
+                            img.card_picture-img(src=`/img/tours/${tour.imageCover}` alt=`Picture of ${tour.name}`)
                         h3.heading-tertiary
                             span=tour.name
 
@@ -17,19 +17,19 @@ block content
                         p.card_text= tour.summary
                         div.card_data
                             svg.card_icon
-                                use(xlink:href='img/icons.svg#icon-map-pin')
+                                use(xlink:href='/img/icons.svg#icon-map-pin')
                             span= tour.startLocation.description
                         div.card_data
                             svg.card_icon
-                                use(xlink:href='img/icons.svg#icon-calendar')
-                            span= tour.startDates[0].toLocaleString('en-us', {month: 'long'})
+                                use(xlink:href='/img/icons.svg#icon-calendar')
+                            span= tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
                         div.card_data
                             svg.card_icon
-                                use(xlink:href='img/icons.svg#icon-flag')
+                                use(xlink:href='/img/icons.svg#icon-flag')
                             span= `${tour.locations.length} stops`
                         div.card_data
                             svg.card_icon
-                                use(xlink:href='img/icons.svg#icon-user')
+                                use(xlink:href='/img/icons.svg#icon-user')
                             span= `${tour.maxGroupSize} people`
 
                     div.card_footer
@@ -42,4 +42,4 @@ block content
                             span.card_footer-text= tour.ratingsQuantity
                             | )
 
-                        a.btn.btn-green.btn-small(href=`/tours/${tour.slug}`) Details
+                        a.btn.btn-green.btn-small(href=`/tour/${tour.slug}`) Details

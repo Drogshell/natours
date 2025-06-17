@@ -41,7 +41,7 @@ reviewSchema.index({ tour: 1, user: 1 }, { unique: true });
 reviewSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'user',
-        select: 'userName',
+        select: 'userName userProfilePic',
     });
     next();
 });
@@ -63,7 +63,7 @@ reviewSchema.statics.calcAvgRatings = async function (tourId) {
     if (stats.length > 0) {
         await Tour.findByIdAndUpdate(tourId, {
             ratingsQuantity: stats[0].nRating,
-            ratingsAverage: stats[1].avgRating,
+            ratingsAverage: stats[0].avgRating,
         });
     } else {
         await Tour.findByIdAndUpdate(tourId, {

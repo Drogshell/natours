@@ -1,4 +1,92 @@
 extends base
 
+block append head
+    link( href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet")
+    script(src='https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js')
+
+mixin reviewCard(review)
+    div.reviews_card
+        div.reviews_avatar
+            img.reviews_avatar-img(src=`/img/users/${review.user.userProfilePic}`, alt=`Photo of ${review.user.userName}`)
+            h6.reviews_user= review.user.userName
+        p.reviews_text= review.review
+        div.reviews_rating
+            each star in [1,2,3,4,5]
+              svg.reviews_star(class=`reviews_star-${review.rating >= star ? 'active':'inactive'}`)
+                use(xlink:href='/img/icons.svg#icon-star')
+
+mixin overviewBox(label, text, icon)
+    div.overview-box_detail
+        svg.overview-box_icon
+            use(xlink:href=`/img/icons.svg#icon-${icon}`)
+        span.overview-box_label= label
+        span.overview-box_text= text
+
+
 block content
-    h1 This is a specific tour details page
+    section.section-header
+        div.header_hero
+            div.header_hero-overlay &nbsp;
+            img.header_hero-img(src=`/img/tours/${tour.imageCover}`, alt=`Picture of ${tour.name}`)
+        div.heading-box
+            h1.heading-primary
+                span= tour.name
+            div.heading-box_group
+                div.heading-box_detail
+                    svg.heading-box_icon
+                        use(xlink:href='/img/icons.svg#icon-clock')
+                    span.heading-box_text= `${tour.duration} days`
+                div.heading-box_detail
+                    svg.heading-box_icon
+                        use(xlink:href='/img/icons.svg#icon-map-pin')
+                    span.heading-box_text= tour.startLocation.description
+    section.section-description
+        div.overview-box
+            div.overview-box_group
+                h2.heading-secondary.ma-bt-lg Quick Facts
+                - const date = tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
+                +overviewBox('Next Date', date, 'calendar')
+                +overviewBox('Difficulty', tour.difficulty, 'trending-up')
+                +overviewBox('Participants', `${tour.maxGroupSize}`, 'user')
+                +overviewBox('Rating', `${tour.ratingsAverage} / 5`, 'star')
+
+            div.overview-box_group
+                h2.heading-secondary.ma-bt-lg Your Tour Guides
+                each guide in tour.guides
+                  div.overview-box_detail
+                      img.overview-box_img(src=`/img/users/${guide.userProfilePic}`, alt=`${guide.userName}`)
+                      - if (guide.role === 'lead-tour-guide')
+                        span.overview-box_label Lead Tour Guide
+                      - if (guide.role === 'tour-guide')
+                        span.overview-box_label Tour Guide
+                      span.overview-box_text= guide.userName
+
+        div.description-box
+            h2.heading-secondary.ma-bt-lg= `About ${tour.name} tour`
+            - const paragraphs = tour.description.split('\n')
+              each paragraph in paragraphs
+                p.description_text= paragraph
+
+    section.section-pictures
+        each img, i in tour.images
+          div.picture-box
+            img.picture-box_img(src=`/img/tours/${img}`, alt=`The ${tour.name} tour ${i + 1}`, class=`picture-box_img-${i + 1}`)
+
+    section.section-map
+        #map(data-locations= `${JSON.stringify(tour.locations)}`)
+
+    section.section-reviews
+        div.reviews
+            each review in tour.reviews
+                +reviewCard(review)
+
+    section.section-cta
+        div.cta
+            div.cta_img.cta_img-logo
+                img(src='/img/logo-white.png', alt='Natours logo')
+            img.cta_img.cta_img-1(src=`/img/tours/${tour.images[1]}`, alt='Tour picture')
+            img.cta_img.cta_img-2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
+            div.cta_content
+                h2.heading-secondary What are you waiting for?
+                p.cta_text= `${tour.duration} days. 1 adventure. Infinite memories.`
+                button.btn.btn-green.span-all-rows Book Today!

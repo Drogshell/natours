@@ -36,3 +36,35 @@ body {
     flex: 1;
     position: relative;
 }
+
+.flex {
+    display: flex;
+}
+
+.span-all-rows {
+    grid-row: 1 / -1;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.ma-bt-md {
+    margin-bottom: 3rem;
+}
+
+.ma-bt-lg {
+    margin-bottom: 3.5rem;
+}
+
+.right {
+    text-align: right;
+}
+
+.line {
+    margin: 6rem 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-950);
+}

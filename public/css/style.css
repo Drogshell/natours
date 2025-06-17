@@ -1,3 +1,4 @@
+/*-------------------- Header Styles --------------------*/
 .header {
     background-color: var(--background-5);
     padding: 0 5rem;
@@ -13,7 +14,36 @@
     height: 4rem
 }
 
+.header_hero {
+    height: 100%
+}
+
+.header_hero-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: 50% 25%;
+}
+
+.header_hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*TODO Mess around with this to find a nicer look*/
+    /*background-image: linear-gradient(to bottom right, var(--primary-500), var(--secondary-500));*/
+    /*opacity: 0.7;*/
+}
+
+.header_hero-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--primary-500), var(--secondary-500));
+    opacity: 0.8;
+}
+/*-------------------- Heading Styles --------------------*/
 .heading-primary {
+    font-family: Poppins, sans-serif;
     font-size: 5rem;
     text-align: center;
     width: 70%;
@@ -21,10 +51,12 @@
 }
 
 .heading-secondary {
+    font-family: Poppins, sans-serif;
     font-size: 2.25rem;
     text-transform: uppercase;
     font-weight: 700;
     background-image: linear-gradient(to right, var(--primary-500), var(--secondary-500));
+    background-clip: text;
     color: transparent;
     letter-spacing: 0.1rem;
     line-height: 1.3;
@@ -32,11 +64,13 @@
 }
 
 .heading-secondary-error {
+    font-family: Poppins, sans-serif;
     font-size: 3.5rem;
     background-image: linear-gradient(to right, var(--error-variant), var(--error-red));
 }
 
 .heading-tertiary {
+    font-family: Poppins, sans-serif;
     font-size: 2.75rem;
     text-align: right;
     position: absolute;
@@ -61,6 +95,367 @@
     background-image: linear-gradient(to right, var(--primary-500), var(--secondary-500));
 }
 
+.heading-box {
+    position: absolute;
+    padding: 2rem;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(1rem);
+}
+
+.heading-box_group {
+    color: var(--text-900);
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-box_detail {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 0.75rem 0.5rem rgba(0, 0, 0, 0.5));
+}
+
+.heading-box_detail svg {
+    margin-right: 0.8rem;
+}
+.heading-box_detail:not(:last-child) {
+    margin-right: 4rem;
+}
+.heading-box_icon {
+    height: 2rem;
+    width: 2rem;
+    fill: currentColor;
+    filter: drop-shadow(0 0.75rem 0.5rem rgba(0, 0, 0, 0.5));
+}
+
+/*-------------------- Section Styles --------------------*/
+.section-header {
+    position: relative;
+    height: 38vw;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--section-rotate)), 0 100%);
+}
+
+.section-description {
+    background-color: var(--background-50);
+    margin-top: calc(0px - var(--section-rotate));
+    display: flex;
+}
+
+.section-description > * {
+    padding: 14vw 8vw calc(1vw + var(--section-rotate));
+    flex: 0 0 50%;
+}
+
+.section-map {
+    position: relative;
+    height: 100rem;
+    margin-top: calc(0px - var(--section-rotate));
+}
+
+.section-cta {
+    margin-top: calc(0px - var(--section-rotate));
+    padding: calc(15rem + var(--section-rotate)) 3rem 11rem;
+    background-color: var(--background-5);
+}
+
+/*-------------------- Tour Styles --------------------*/
+.description,
+.description-box {
+    background-color: var(--background-5);
+    margin-right: 5rem;
+}
+.description-box,
+.description_text {
+    font-size: 1.7rem;
+}
+.description-box,
+.description_text:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.overview-box {
+    background-color: var(--background-5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.overview-box_group:not(:last-child) {
+    margin-bottom: 7rem;
+}
+.overview-box_detail {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+.overview-box_detail svg {
+    margin-right: 1.25rem;
+}
+.overview-box_detail:not(:last-child) {
+    margin-bottom: 2.25rem;
+}
+.overview-box_icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--primary);
+}
+.overview-box_label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-right: 2.25rem;
+    text-transform: uppercase;
+}
+.overview-box_text {
+    text-transform: capitalize;
+}
+.overview-box_img {
+    border-radius: 50%;
+    height: 3.5rem;
+    margin-right: 1.25rem;
+}
+
+.section-pictures {
+    display: flex;
+    clip-path: polygon(
+            0 var(--section-rotate),
+            100% 0,
+            100% calc(100% - var(--section-rotate)),
+            0 100%
+    );
+    margin-top: calc(0px - var(--section-rotate));
+    position: relative;
+    z-index: 1000;
+}
+
+.picture-box_img {
+    display: block;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+}
+.picture-box_img-1 {
+    padding-top: 15%;
+}
+.picture-box_img-2 {
+    padding-bottom: 15%;
+}
+.picture-box_img-3 {
+    padding-bottom: 27%;
+}
+
+.section-reviews {
+    margin-top: calc(0px - var(--section-rotate));
+    padding: calc(5rem + var(--section-rotate)) 0;
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(to right, var(--primary-500), var(--secondary-500));
+    clip-path: polygon(
+            0 var(--section-rotate),
+            100% 0,
+            100% calc(100% - var(--section-rotate)),
+            0 100%
+    );
+}
+
+/*TODO Code to hide the scrollbar in the reviews section needs more testing, it's very buggy right now*/
+/*.scrollable-content {*/
+/*    box-shadow: hsl(0 0% 0% / 0.25) 0 0.25em 0.5em;*/
+/*    background: hsl(0 0% 100%);*/
+/*    padding: 2em;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    max-width: 450px;*/
+/*    max-height: 350px;*/
+/*    overflow: hidden;*/
+/*    scrollbar-gutter: stable both-edges;*/
+/*}*/
+
+/*.scrollable-content:hover,*/
+/*.scrollable-content:active,*/
+/*.scrollable-content:focus {*/
+/*    overflow-y: scroll;*/
+/*}*/
+
+/*.scrollable-content::-webkit-scrollbar {*/
+/*    width: 0.5em;*/
+/*}*/
+
+/*.scrollable-content::-webkit-scrollbar-track {*/
+/*    background-color: hsl(250 15% 93%);*/
+/*}*/
+
+/*.scrollable-content::-webkit-scrollbar-thumb {*/
+/*    background-color: hsl(250 15% 60%);*/
+/*}*/
+
+/*.scrollable-content::-webkit-scrollbar-thumb:hover {*/
+/*    background-color: hsl(250 15% 27%);*/
+/*}*/
+
+/*.mockup-font p:first-child {*/
+/*    font-size: 1.5em;*/
+/*    font-weight: 700;*/
+/*}*/
+
+/*.mockup-font p:not(:first-child) {*/
+/*    font-family: 'Flow Block', sans-serif;*/
+/*}*/
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.marker {
+    background-image: url('../img/pin.png');
+    background-size: cover;
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 25rem;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    padding: 1.5rem !important;
+    font-size: 1.4rem;
+    color: var(--text-100);
+    box-shadow: 0 1rem 3rem rgba(18, 237, 215, 0.2) !important;
+}
+
+.reviews {
+    padding: 5rem 0;
+    display: grid;
+    grid-column-gap: 6rem;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: auto;
+}
+
+.reviews::-webkit-scrollbar {
+    display: none;
+}
+
+.reviews:before,
+.reviews:after {
+    content: '';
+    width: 2rem;
+}
+
+.reviews_card {
+    width: 30rem;
+    padding: 4rem;
+    background-color: var(--background-5);
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews_avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.reviews_avatar-img {
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+.reviews_user {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.reviews_text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+.reviews_rating {
+    margin-top: auto;
+    display: flex;
+}
+.reviews_star {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1px;
+}
+.reviews_star-active {
+    fill: var(--primary);
+}
+.reviews_star-inactive {
+    fill: var(--grey-2);
+}
+
+/*-------------------- Call to Action Styles --------------------*/
+.cta {
+    position: relative;
+    max-width: 105rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: var(--accent-100);
+    padding: 9rem 5rem 9rem 21rem;
+    border-radius: 2rem;
+    box-shadow: 0 3rem 8rem 0.5rem rgba(18, 237, 215, 0.5);
+}
+.cta_img {
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 50%;
+    box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
+}
+.cta_img-logo {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right bottom, var(--primary-500), var(--secondary-500));
+    z-index: 10;
+    transform: translate(-35%, -50%);
+}
+.cta_img-logo img {
+    width: 100%;
+}
+.cta_img-1 {
+    transform: translate(-10%, -50%) scale(0.97);
+    z-index: 9;
+}
+.cta_img-2 {
+    transform: translate(15%, -50%) scale(0.94);
+    z-index: 8;
+}
+.cta_content {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    grid-gap: 0.7rem;
+    grid-auto-flow: column;
+    align-items: center;
+}
+.cta_text {
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+/*-------------------- Nav Styles --------------------*/
 .nav {
     display: flex;
     align-items: center;
@@ -119,7 +514,7 @@
     border-color: var(--accent-200);
 }
 
-/*-------------------- Card Elements --------------------*/
+/*-------------------- Card Styles --------------------*/
 .card-container {
     max-width: 140rem;
     margin: 0 auto;
@@ -233,7 +628,7 @@
     align-self: center;
 }
 
-/*-------------------- Footer --------------------*/
+/*-------------------- Footer Styles --------------------*/
 .footer {
     background-color: var(--background-5);
     padding: 6rem 4rem 3rem 4rem;
