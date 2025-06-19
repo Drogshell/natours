@@ -49,21 +49,21 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-userSchema.pre('save', async function (next) {
-    if (!this.isModified('userPassword')) return next();
-
-    this.userPassword = await bcrypt.hash(this.userPassword, 12);
-    this.userConfirmPassword = undefined;
-    next();
-});
-
-userSchema.pre('save', function (next) {
-    if (!this.isModified('userPassword') || this.isNew) return next();
-
-    // This ensures the token has been created after the password has changed
-    this.passwordChangedAt = Date.now() - 1000;
-    next();
-});
+// userSchema.pre('save', async function (next) {
+//     if (!this.isModified('userPassword')) return next();
+//
+//     this.userPassword = await bcrypt.hash(this.userPassword, 12);
+//     this.userConfirmPassword = undefined;
+//     next();
+// });
+//
+// userSchema.pre('save', function (next) {
+//     if (!this.isModified('userPassword') || this.isNew) return next();
+//
+//     // This ensures the token has been created after the password has changed
+//     this.passwordChangedAt = Date.now() - 1000;
+//     next();
+// });
 
 userSchema.pre(/^find/, function (next) {
     this.find({ active: { $ne: false } });

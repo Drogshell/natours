@@ -1,0 +1,15 @@
+extends base
+
+block content
+    main.main
+        div.login-form
+            h2.heading-secondary.ma-bt-lg Log into your account
+            form.form
+                div.form_group
+                    label.form_label(for='email') Email Address
+                    input#email.form_input(type='email', placeholder='you@example.com', required)
+                div.form_group.ma-bt-md
+                    label.form_label(for='password') Password
+                    input#password.form_input(type='password', placeholder='********', required, minlength='8')
+                div.form_group
+                    button.btn.btn-green Login

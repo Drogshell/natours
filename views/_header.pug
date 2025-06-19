@@ -4,9 +4,11 @@ header.header
     div.header_logo
         img(src='/img/logo-white.png')
     nav.nav.nav-user
-        //a.nav_el(href='#') My Bookings
-        //a.nav_el(href='#')
-        //    img.nav_user-img(src='img/user.jpg' alt='User Photo')
-        //    span Trevin
-        button.nav_el Log in
-        button.nav_el.nav_el-cta Sign Up
+        if user
+            a.nav_el.nav_el-logout Log Out
+            a.nav_el(href='#')
+                img.nav_user-img(src=`/img/users/${user.userProfilePic}` alt=`Photo of ${user.userName}`)
+                span= user.userName.split(' ')[0]
+        else
+            a(href='/login').nav_el Log in
+            a.nav_el.nav_el-cta Sign Up

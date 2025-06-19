@@ -50,10 +50,12 @@ body {
     margin: 0 auto;
 }
 
+/*Margin Bottom Medium*/
 .ma-bt-md {
     margin-bottom: 3rem;
 }
 
+/*Margin Bottom Large*/
 .ma-bt-lg {
     margin-bottom: 3.5rem;
 }
@@ -62,9 +64,35 @@ body {
     text-align: right;
 }
 
+.centered {
+    text-align: center;
+}
+
 .line {
     margin: 6rem 0;
     width: 100%;
     height: 1px;
     background-color: var(--text-950);
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+}
+
+.alert-success {
+    background-color: var(--primary);
+}
+
+.alert-error {
+    background-color: var(--error-red);
 }
